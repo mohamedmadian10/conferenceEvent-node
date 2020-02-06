@@ -1,0 +1,78 @@
+<%- include("../partials/header") -%>
+<br/>
+<div class="modal-dialog" >
+		<div class="modal-content">
+			
+			<hr />
+			<div class="modal-body">
+				<form  action="/speakers/edit/<%=speaker._id%>" method="post"   role="form">
+					<div class="form-group">
+						<div class="input-group">
+							<span class="input-group-addon">
+							<span class="glyphicon glyphicon-user"></span>
+							</span>
+						
+						</div>
+					</div>
+					<div class="form-group">
+						<div class="input-group">
+							<span class="input-group-addon">
+							<span class="glyphicon glyphicon-lock"></span>
+							</span>
+							<input type="text" name="name" class="form-control" placeholder="Name" value="<%=speaker.name%>" />
+
+						</div>
+
+					</div>
+					<div class="form-group">
+						<div class="input-group">
+							<span class="input-group-addon">
+							<span class="glyphicon glyphicon-lock"></span>
+							</span>
+							<input type="text" name="age" value="<%=speaker.age%>" class="form-control" placeholder="Age"  />
+
+						</div>
+
+					</div>
+					<div class="form-group">
+						<div class="input-group">
+							<span class="input-group-addon">
+							<span class="glyphicon glyphicon-lock"></span>
+							</span>
+							<input type="text" name="username" class="form-control" placeholder="user Name" value="<%=speaker.username%>" />
+
+						</div>
+
+					</div>
+					<div class="form-group">
+						<div class="input-group">
+							<span class="input-group-addon">
+							<span class="glyphicon glyphicon-lock"></span>
+							</span>
+							<input type="text" name="userpass" class="form-control" placeholder="User Password" value="<%=speaker.userpass%>" />
+
+						</div>
+
+					</div>
+                    <div class="form-group">
+                            <div class="input-group">
+                                <span class="input-group-addon">
+                                <span class="glyphicon glyphicon-lock"></span>
+								</span>
+								
+                                
+    
+                            </div>
+    
+                        </div>
+
+					<div class="form-group text-center">
+						<button type="submit" class="btn btn-success btn-lg" >update</button>
+						
+					</div>
+
+				</form>
+			</div>
+		</div>
+	</div>
+

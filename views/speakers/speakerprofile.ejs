@@ -1,0 +1,72 @@
+<html>
+    <head>
+        <script src="/jquery.js"></script>
+        <script src="/js/bootstrap.js"></script>
+         
+           <link rel="stylesheet" href="/css/bootstrap.css"/>
+   
+           <nav class="navbar navbar-expand-lg navbar-light bg-light">
+
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+              <span class="navbar-toggler-icon"></span>
+            </button>
+          
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+              
+              <form class="form-inline my-2 my-lg-0">
+                    <ul class="navbar-nav mr-auto">
+                    <li class="nav-item">
+                            <a class="nav-link " href="/logout">logout</a>
+                    </li>
+               </ul>
+                <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Welcome <%=username%> </button>
+              </form>
+            </div>
+          </nav>
+        </head>
+          <body style="background-color: beige">
+            <h3> events List </h3>
+            <table class="table table-dark">
+                    <thead>
+                      <tr>
+                        <th scope="col">event ID</>
+                        <th scope="col">title</th>
+                        <th scope="col">mainspeaker</th>
+                        <th scope="col">otherSpeakers</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tbody>
+                        <% events.forEach((event)=>{%>
+                          <tr>
+                              <td> <%=event._id%></td>
+                              <td> <%=event.title%></td>
+                              <% if(event.mainspeaker != null){ %>
+                              <td> <%=event.mainspeaker.name%></td>
+                              <%}else{%>
+                                  <td>not founded</td>
+                                <%}%>
+                             <td>
+                               <ul>
+                                 <%event.otherSpeakers.forEach((speaker)=>{%>
+                                
+                                    <li><%=speaker.name%></li>
+    
+                            
+                                 <%})%>
+                               </ul>
+                             </td>
+                            
+                          </tr>
+                          
+                        <%})%>
+                     
+                    </tbody>
+
+                  </table>
+          </body>
+     
+     
+    
+      
+       
